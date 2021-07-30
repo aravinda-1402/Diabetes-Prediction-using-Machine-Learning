@@ -22,6 +22,6 @@ Several constraints were placed on the selection of these instances from a large
 
 
 ## Algorithim
-Entire prdeicition model is written with Python3 and Jupyter Notebook.
+Entire prediction model is written in Python3 and Jupyter Notebook.
 used python lib : pandas, numpy , matplot-lib , scikit , seaborn , tensorflow
 
