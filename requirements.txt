@@ -1,0 +1,7 @@
+• Python-scikit-learn 0.24 
+• Numpy 1.21.1 
+• Pandas v1.3.1
+• Matplotlib 3.3.4 
+• TensorFlow 2.0 
+• Keras 2.3.0
+• Seaborn 0.11.1
