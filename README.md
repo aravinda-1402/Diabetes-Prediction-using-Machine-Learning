@@ -35,8 +35,8 @@ A 2-hour value between 140 and 200 mg/dL (7.8 and 11.1 mmol/L) is called impaire
 
 **The** ***dependent variable*** **is whether the patient is having diabetes or not.**
 
-* **Data Cleaning:** It will take place as data has got a lot of missing values. Handling missing values can be done either by replacing null values with mode or mean or replacing the null with a random variable.
-Sample Data:
+* **Data Cleaning:** It will take place as data has got a lot of missing values. Handling missing values can be done either by replacing null values with mode, mean, median or replacing the null with a random variable.
+
 
 * **Algorithms Used:**  As we have to classify the data into patients having diabetes or not, I have chosen k-nearest neighbors (KNN), Random decision forests and artificial neural networks (ANN) to see which one provides us with the best accuracy.
 
