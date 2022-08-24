@@ -1,5 +1,5 @@
 # Pima Indians Diabetes Database
-Paper accepted at IEEE 4th International Conference on Inventive Research in Computing Applications (ICIRCA 2022)
+Paper accepted at <b>'IEEE 4th International Conference on Inventive Research in Computing Applications (ICIRCA 2022).'</b>
 
 ## Predicting the onset of diabetes
 
