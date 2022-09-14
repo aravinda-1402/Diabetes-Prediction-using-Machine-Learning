@@ -1,7 +1,7 @@
 # Pima Indians Diabetes Database
 Paper accepted at <b>'IEEE 4th International Conference on Inventive Research in Computing Applications (ICIRCA 2022).'</b>
 
-<u>Note</u>: <b>The earlier version of this project was done by me as part of an internship at the 'Data Exposys Lab', Bengaluru </b>.
+<b>Note:</b>The earlier version of this project was done by me as part of an internship at the 'Data Exposys Lab', Bengaluru.
 ## Predicting the onset of diabetes
 
 Diabetes is a type of chronic disease which is more common among the people of all age groups. Predicting this disease at an early stage can help a person to take the necessary precautions and change his/her lifestyle accordingly to either prevent the occurrence of this disease or control the disease (For people who already have the disease).
