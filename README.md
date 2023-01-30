@@ -59,7 +59,15 @@ A 2-hour value between 140 and 200 mg/dL (7.8 and 11.1 mmol/L) is called impaire
 If you use the code in this repository, please cite the following paper:
 
 ```
-A. R. J and R. Kotian, "Diabetes Prognosis using Machine Learning," 2022 4th International Conference on Inventive Research in Computing Applications (ICIRCA), Coimbatore, India, 2022, pp. 875-882, doi: 10.1109/ICIRCA54612.2022.9985487.
+@INPROCEEDINGS{9985487,
+  author={J, Aravinda Raman and Kotian, Rakshan},
+  booktitle={2022 4th International Conference on Inventive Research in Computing Applications (ICIRCA)}, 
+  title={Diabetes Prognosis using Machine Learning}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={875-882},
+  doi={10.1109/ICIRCA54612.2022.9985487}}
 ```
 
 
