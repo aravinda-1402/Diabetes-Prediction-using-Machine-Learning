@@ -1,62 +1,111 @@
-# Pima Indians Diabetes Database
-📄 Paper link: https://doi.org/10.1109/ICIRCA54612.2022.9985487
+# Pima Indians Diabetes Database 🩺
 
-**Note:** The earlier version of this project was completed and presented by me as part of an internship at the 'Data Exposys Lab,' Bengaluru.
+📄 **Paper link:** https://doi.org/10.1109/ICIRCA54612.2022.9985487
 
-## Predicting the onset of diabetes
+**Note:** This project was initially completed and presented during an internship at the 'Data Exposys Lab,' Bengaluru.
 
-Diabetes is a type of chronic disease that is more common among people of all age groups. Predicting this disease at an early stage can help a person to take necessary precautions and change his/her lifestyle accordingly to either prevent the occurrence of this disease or control the disease (For people who already have the disease). So, the objective of this project is to identify whether the patient has diabetes or not based on diagnostic measurements.
+---
 
-* **Dataset Used:** The dataset used has been obtained from the UCI Machine Learning Repository having 769 records of Female Patients exclusively from Kaggle.
-* 📊 **Dataset Link:** [PIMA-Indian-diabetes_database](https://www.kaggle.com/uciml/pima-indians-diabetes-database)
+## Predicting the Onset of Diabetes
 
-From domain knowledge, I have analyzed and found out the ranges of values and their effects on diabetes for each continuous variable in the dataset. Based upon these ranges, we will categorize the continuous variables for implementing the learning models like KNN, Random-Forest, and Artificial Neural Network and see which model provides the best accuracy in the next step. Also, we can utilize these ranges to come up with an appropriate null value replacement for each independent variable.
+Diabetes is a chronic disease prevalent across all age groups. Early prediction can help individuals take preventive measures and manage the disease effectively. This project aims to identify whether a patient has diabetes based on diagnostic measurements.
 
-**There are 8 independent variables:**
+* **Dataset Used:** The dataset, sourced from the UCI Machine Learning Repository, contains 769 records of female patients and is available on Kaggle.
+* 📊 **Dataset Link:** https://www.kaggle.com/uciml/pima-indians-diabetes-database
 
-1. **Pregnancies:** No. of times pregnant.
-2. **Glucose:** Plasma Glucose Concentration a 2-hour in an oral glucose tolerance test (mg/dl)
-   * A 2-hour value between 140 and 200 mg/dL (7.8 and 11.1 mmol/L) is called impaired glucose tolerance. This is called "pre-diabetes." It means you are at increased risk of developing diabetes over time. A glucose level of 200 mg/dL (11.1 mmol/L) or higher is used to diagnose diabetes.
-3. **Blood Pressure:** Diastolic Blood Pressure(mmHg)
-   * If Diastolic B.P > 90 means High B.P (High Probability of Diabetes)
-   * Diastolic B.P < 60 means low B.P (Less Probability of Diabetes)
-4. **Skin Thickness:** Triceps Skin Fold Thickness (mm) – A value used to estimate body fat. Normal Triceps Skin-fold Thickness in women is 23mm. Higher thickness leads to obesity and the chances of diabetes increase.
-5. **Insulin:** 2-Hour Serum Insulin (mu U/ml)
-6. **BMI:** Body Mass Index (weight in kg/ height in m²) Body Mass Index of 18.5 to 25 is within the normal range. BMI between 25 and 30 then it falls within the overweight range. A BMI of 30 or over falls within the obese range.
-7. **Diabetes Pedigree Function:** It provides information about diabetes history in relatives and the genetic relationship of those relatives with patients. A higher Pedigree Function means the patient is more likely to have diabetes.
-8. **Age (Years)**
+---
 
-9. **Outcome:** Class Variable (0 or 1) where ‘0’ denotes the patient is not having diabetes and ‘1’ denotes the patient having diabetes.
+## Project Methodology 📈
 
-The dependent variable is whether the patient is having diabetes or not.
+### Data Collection
 
-* **Data Cleaning:** It will take place as data has a lot of missing values. Handling missing values can be done either by replacing null values with mode, mean, or median, or by replacing the null with a random variable.
+The study uses the Pima Indians Diabetes Database from the National Institutes of Diabetes and Digestive and Kidney Diseases. The dataset includes diagnostic measurements from 768 female patients of Pima Indian heritage, with the goal of determining the presence of diabetes.
 
-* **Algorithms Used:** As we have to classify the data into patients having diabetes or not, I have chosen k-nearest neighbors (KNN), Random decision forests, and artificial neural networks (ANN) to see which one provides us with the best accuracy.
+### Data Preparation
 
-* **Software Package Used:**
-   * Python-sci-kit-learn 0.24
-   * Numpy 1.21.1
-   * Pandas v1.3.1
-   * Matplotlib 3.3.4
-   * TensorFlow 2.0
-   * Keras 2.3.0
-   * Seaborn 0.11.1.
+**Data Pre-Processing:**
+- **Handling Missing Values:** Missing values were replaced with the median of their respective attributes using Pandas and NumPy libraries.
+- **Outlier Detection and Removal:** Outliers were identified and removed using the interquartile range (IQR) method. After removing outliers, 732 values remained in the dataset.
+- **Feature Engineering:** New variables were created logically and one-hot encoded. Attributes were scaled using Robust Scaler to prevent bias.
 
-* **Advantage of this project:** The rules derived will be helpful for doctors to identify patients suffering from diabetes. Further predicting the disease early leads to treating the patient before it becomes critical.
+**Splitting the Data:**
+- The data was split into 65% training and 35% testing datasets.
 
-# Citation
+### Machine Learning Models
+
+**K-Nearest Neighbor (KNN):**
+- **Algorithm:** Used for classifying data by finding the most similar training data.
+- **Optimal K Value:** Selected based on the highest accuracy from a range of K values. The optimal K value found was 16.
+- **Performance:** Training accuracy was 87.21%, and testing accuracy was 82.81%.
+
+**Random Forest Classifier (RF):**
+- **Algorithm:** Uses multiple decision trees to improve prediction accuracy.
+- **Performance:** Training accuracy was 92.04%, and testing accuracy was 87.89%. This model had the highest accuracy among the tested models.
+
+**Artificial Neural Network (ANN):**
+- **Architecture:** Consisted of 7 hidden layers with batch normalization and dropout to prevent overfitting. Stochastic Gradient Descent was used as the optimizer.
+- **Performance:** Training accuracy was 93.08%, and testing accuracy was 86.32%.
+
+### Evaluation Metrics
+
+- **Precision:** Ratio of true positives to the sum of true positives and false positives.
+- **Recall:** Ratio of true positives to the sum of true positives and false negatives.
+- **F1-Score:** Harmonic mean of precision and recall.
+- **Accuracy:** Sum of true predictions divided by the total number of predictions.
+
+### Results
+
+**KNN Model:**
+- Precision: 87%
+- Recall: 89%
+- F1-Score: 88%
+- Training + Testing Time: 1.43 seconds
+
+**RF Classifier:**
+- Precision: 90%
+- Recall: 93%
+- F1-Score: 91%
+- Training + Testing Time: 1.61 seconds
+
+**ANN Model:**
+- Precision: 89%
+- Recall: 91%
+- F1-Score: 90%
+- Training + Testing Time: 1.64 seconds
+
+### Software Packages Used
+
+- **Python-sci-kit-learn:** 0.24
+- **Numpy:** 1.21.1
+- **Pandas:** v1.3.1
+- **Matplotlib:** 3.3.4
+- **TensorFlow:** 2.0
+- **Keras:** 2.3.0
+- **Seaborn:** 0.11.1
+
+### Advantages and Real-World Applications 🌍
+
+- **Early Detection:** This project aids in the early detection of diabetes, allowing for timely medical intervention.
+- **Preventive Measures:** Individuals can take preventive measures to manage their lifestyle and reduce the risk of developing diabetes.
+- **Healthcare Support:** Doctors can use this model to identify at-risk patients and prioritize their care.
+- **Business Applications:** Health insurance companies can use predictive models to assess risk and tailor their policies. Fitness and wellness programs can integrate these insights to provide personalized health plans.
+
+## Project Advantage 🌟
+
+The derived rules help doctors identify diabetes patients early, leading to timely intervention and treatment before the condition becomes critical. This can significantly reduce healthcare costs and improve patient outcomes.
+
+## Citation 📝
 
 If you use the code in this repository, please cite the following paper:
-
 ```
 @INPROCEEDINGS{9985487,
-  author={J, Aravinda Raman and Kotian, Rakshan},
-  booktitle={2022 4th International Conference on Inventive Research in Computing Applications (ICIRCA)}, 
-  title={Diabetes Prognosis using Machine Learning}, 
-  year={2022},
-  volume={},
-  number={},
-  pages={875-882},
-  doi={10.1109/ICIRCA54612.2022.9985487}}
+author={J, Aravinda Raman and Kotian, Rakshan},
+booktitle={2022 4th International Conference on Inventive Research in Computing Applications (ICIRCA)},
+title={Diabetes Prognosis using Machine Learning},
+year={2022},
+volume={},
+number={},
+pages={875-882},
+doi={10.1109/ICIRCA54612.2022.9985487}}
 ```
+
