@@ -83,16 +83,13 @@ The study uses the Pima Indians Diabetes Database from the National Institutes o
 - **Keras:** 2.3.0
 - **Seaborn:** 0.11.1
 
-### Advantages and Real-World Applications 🌍
+### Project Advantages and Real-World Applications 🌍
 
 - **Early Detection:** This project aids in the early detection of diabetes, allowing for timely medical intervention.
 - **Preventive Measures:** Individuals can take preventive measures to manage their lifestyle and reduce the risk of developing diabetes.
 - **Healthcare Support:** Doctors can use this model to identify at-risk patients and prioritize their care.
 - **Business Applications:** Health insurance companies can use predictive models to assess risk and tailor their policies. Fitness and wellness programs can integrate these insights to provide personalized health plans.
-
-## Project Advantage 🌟
-
-The derived rules help doctors identify diabetes patients early, leading to timely intervention and treatment before the condition becomes critical. This can significantly reduce healthcare costs and improve patient outcomes.
+.
 
 ## Citation 📝
 
